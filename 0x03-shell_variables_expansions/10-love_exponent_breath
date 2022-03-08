@@ -1,2 +1,2 @@
 #!/bin/bash
-Just 10
+echo $((BREATH**LOVE))

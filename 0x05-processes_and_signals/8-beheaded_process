@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Kills a running process
+
+pkill -SIGKILL -f "7-highlander"

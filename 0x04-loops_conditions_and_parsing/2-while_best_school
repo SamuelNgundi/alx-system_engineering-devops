@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # While loop to display Best School
 
-COUNTER=0
-while [ $COUNTER -lt 10 ]
+n=1
+while [ $n -le 10]
 do
     echo "Best School"
-    let COUNTER=COUNTER+1
+    (( n++ ))
 done

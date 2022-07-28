@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Displays all active IPV4 Ips on the machine including localhost
+
+ifconfig | awk -F "[: ]+" '/inet addr:/ { print $4 }'

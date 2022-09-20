@@ -1,5 +1,6 @@
-# sets up client SSH configuration file so that we can connect t a server
-without using a password
+#!/usr/bin/env bash
+# Configure ssh not to use password
+
 file_line {'password auth':
 	path => '/etc/ssh/ssh_config',
 	match => '^PasswordAuthentication',

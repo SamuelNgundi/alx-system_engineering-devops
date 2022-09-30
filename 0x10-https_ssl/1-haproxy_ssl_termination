@@ -37,12 +37,12 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-listen thelaura
+listen samuelngu
         bind :80
         mode http
         balance roundrobin
-        server 652-web-01 35.190.176.186:80 check
-        server 652-web-02 35.196.156.157:80 check
+        server 11651-web-01 34.204.168.16:80 check
+        server 11651-web-02 3.237.12.243:80 check
 
 frontend www-http
         bind :80
@@ -50,11 +50,11 @@ frontend www-http
         default_backend web-backend
 
 frontend www-https
-        bind :443 ssl crt /etc/haproxy/ssl/www.thelaura.tech.pem
+        bind :443 ssl crt /etc/haproxy/ssl/www.samuelngu.tech.pem
         reqadd X-Forwarded-Proto:\ https
         default_backend web-backend
 
 backend web-backend
         redirect scheme https if !{ ssl_fc }
-        server 652-web-01 35.190.176.186:80 check
-        server 652-web-02 35.196.156.157:80 check
+        server 11651-web-01 34.204.168.16:80 check
+        server 11651-web-02 3.237.12.243:80 check
